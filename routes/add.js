@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
 
     await course.save()
 
-    res.redirect("/curses")
+    res.redirect("/courses")
 })
 
 module.exports = router

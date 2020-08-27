@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Rubtsov-art/lern-express#readme",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "mongoose": "^5.10.0",

@@ -54,7 +54,7 @@ async function start() {
         if(!candidate) {
             const user = new User({
                 email: "vladilen@mail.ru",
-                name: "Vladilen",
+                name: "Pavel",
                 cart: {items: []}
             })
             await user.save()

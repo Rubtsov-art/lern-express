@@ -6,7 +6,8 @@ const mongoose = require("mongoose")
 const coursesRoutes = require("./routes/courses")
 const cardRoutes = require("./routes/card")
 const addRoutes = require("./routes/add")
-const homeRouter = require("./routes/home")
+const homeRoutes = require("./routes/home")
+const ordersRoutes = require("./routes/orders")
 const path = require("path")
 const User = require("./models/user")
 
@@ -34,10 +35,12 @@ app.use(async (req, res, next) => {
 
 app.use(express.static(path.join(__dirname, "public")))
 app.use(express.urlencoded({ extended: true }))
+
+app.use("/", homeRoutes)
 app.use("/courses", coursesRoutes)
 app.use("/add", addRoutes)
 app.use("/card", cardRoutes)
-app.use("/", homeRouter)
+app.use("/orders", ordersRoutes)
 
 const PORT = process.env.PORT || 3000
 
